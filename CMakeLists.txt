@@ -15,7 +15,11 @@ include_directories(${SDL2_PATH}/include)
 link_directories(${SDL2_PATH}/lib)
 
 # 4. Add your executable
-add_executable(${PROJECT_NAME} src/core/main.cpp)
+add_executable(${PROJECT_NAME} src/core/main.cpp
+        src/core/application.cpp
+        src/core/application.h
+        src/window/window.cpp
+        src/window/window.h)
 
 # 5. Link the libraries
 # Note: On Windows, you usually need SDL2main and SDL2.
