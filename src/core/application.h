@@ -1,7 +1,3 @@
-//
-// Created by eriks on 26/01/2026.
-//
-
 #ifndef GAMEENGINE_APPLICATION_H
 #define GAMEENGINE_APPLICATION_H
 #pragma once
@@ -16,6 +12,7 @@
 
 #include "../window/window.h"
 #include "../engine/engine.h"
+#include "../math/math.h"
 #include <SDL2/SDL.h>
 
 class Application {
@@ -24,14 +21,15 @@ private:
 
     Window* WIN;
 
-
     SDL_Window* window;
     SDL_Renderer* renderer;
     Engine* engine;
+    Camera* player;
 
 
 public:
     Application();
+    ~Application();
 
     void run();
     void update();

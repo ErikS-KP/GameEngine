@@ -1,7 +1,3 @@
-//
-// Created by eriks on 26/01/2026.
-//
-
 #include "window.h"
 
 Window::Window(int width, int height)
@@ -25,4 +21,11 @@ Window::Window(int width, int height)
 Window::~Window() {
     SDL_DestroyWindow(window);
     SDL_DestroyRenderer(renderer);
+}
+
+Vec2 Window::getSize() {
+    Vec2 size;
+    size.x = width;
+    size.y = height;
+    return size;
 }

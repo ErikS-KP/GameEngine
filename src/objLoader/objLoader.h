@@ -1,7 +1,3 @@
-//
-// Created by eriks on 26/01/2026.
-//
-
 #ifndef GAMEENGINE_OBJLOADER_H
 #define GAMEENGINE_OBJLOADER_H
 
@@ -18,14 +14,14 @@ namespace fs = std::filesystem;
 class ObjLoader {
 private:
     std::vector<std::string>    paths;
-    const std::string           meshes_path = "../Assets/Meshes";
+    const std::string           meshes_path = "../src/Assets/Meshes";
     std::vector<std::string>    loadPaths();
 
     std::vector<Mesh>   meshes;
     std::string         current_path;
     MeshPart            currentPart;
     Mesh                currentMesh;
-    Mesh                loadMesh(std::string path);
+    Mesh                loadMesh(const std::string &path);
 
 
 

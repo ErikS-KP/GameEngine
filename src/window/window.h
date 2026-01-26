@@ -1,11 +1,8 @@
-//
-// Created by eriks on 26/01/2026.
-//
-
 #ifndef GAMEENGINE_WINDOW_H
 #define GAMEENGINE_WINDOW_H
 
 #include "SDL2/SDL_render.h"
+#include "../core/structs.h"
 
 // ====================
 // Create window
@@ -13,7 +10,7 @@
 // ====================
 
 class Window {
-    private:
+private:
     int width, height;
 
     SDL_Window* window;
@@ -21,7 +18,7 @@ class Window {
 
     bool isOpenVar;
 
-    public:
+public:
     Window( int width, int height );
     ~Window();
 
@@ -29,6 +26,7 @@ class Window {
     SDL_Renderer* getRenderer(){ return renderer; };
     bool isOpen(){ return isOpenVar; };
     bool close(){ return isOpenVar = false; };
+    Vec2 getSize();
 };
 
 
