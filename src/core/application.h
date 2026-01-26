@@ -6,9 +6,6 @@
 #define GAMEENGINE_APPLICATION_H
 #pragma once
 
-#include "../window/window.h"
-#include <SDL2/SDL.h>
-
 // ====================
 // Init window
 // Init renderer
@@ -17,11 +14,16 @@
 // Game loop
 // ====================
 
+#include "../window/window.h"
+#include "../engine/engine.h"
+#include <SDL2/SDL.h>
+
 class Application {
 private:
     int width, height;
 
-    Window* windowClass;
+    Window* WIN;
+
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -31,6 +33,7 @@ public:
     Application();
 
     void run();
+    void update();
 };
 
 

@@ -4,6 +4,7 @@
 
 #ifndef GAMEENGINE_WINDOW_H
 #define GAMEENGINE_WINDOW_H
+
 #include "SDL2/SDL_render.h"
 
 // ====================

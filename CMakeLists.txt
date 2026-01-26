@@ -19,7 +19,13 @@ add_executable(${PROJECT_NAME} src/core/main.cpp
         src/core/application.cpp
         src/core/application.h
         src/window/window.cpp
-        src/window/window.h)
+        src/window/window.h
+        src/engine/engine.cpp
+        src/engine/engine.h
+        src/core/structs.h
+        src/math/math.h
+        src/objLoader/objLoader.cpp
+        src/objLoader/objLoader.h)
 
 # 5. Link the libraries
 # Note: On Windows, you usually need SDL2main and SDL2.

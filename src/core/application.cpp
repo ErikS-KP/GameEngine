@@ -11,22 +11,32 @@ Application::Application(){
     int SCREEN_WIDTH    = 1000;
     int SCREEN_HEIGHT   = 800;
 
-    windowClass = new Window(SCREEN_WIDTH, SCREEN_HEIGHT);
-    window = windowClass->getWindow();
-    renderer = windowClass->getRenderer();
+    WIN = new Window(SCREEN_WIDTH, SCREEN_HEIGHT);
+    window = WIN->getWindow();
+    renderer = WIN->getRenderer();
 
 }
 
+
+// Run loop
 void Application::run() {
-    while (windowClass->isOpen()) {
+    while (WIN->isOpen()) {
         SDL_Event event;
         while (SDL_PollEvent(&event)) {
             switch (event.type) {
                 case SDL_QUIT:
-                    windowClass->close();
+                    WIN->close();
                     std::cout << "Quitting..." << std::endl;
             }
+            // Game loop
+            update();
+
+            // Render
         }
     }
     SDL_Quit();
+}
+
+void Application::update() {
+
 }
