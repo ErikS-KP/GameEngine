@@ -14,6 +14,7 @@ Application::Application(){
     WIN = new Window(SCREEN_WIDTH, SCREEN_HEIGHT);
     window = WIN->getWindow();
     renderer = WIN->getRenderer();
+    engine = new Engine(renderer);
 
 }
 
@@ -30,7 +31,7 @@ void Application::run() {
             }
             // Game loop
             update();
-
+            engine->render();
             // Render
         }
     }

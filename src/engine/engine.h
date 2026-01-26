@@ -8,7 +8,7 @@
 #include "../objLoader/objLoader.h"
 #include <SDL2/SDL.h>
 
-class engine {
+class Engine {
 private:
     SDL_Renderer* renderer;
     ObjLoader* objLoader;
@@ -16,7 +16,7 @@ private:
     std::vector<Mesh> meshes;
 
     public:
-    engine();
+    Engine( SDL_Renderer* renderer );
     void render();
 
 };
