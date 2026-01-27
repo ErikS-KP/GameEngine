@@ -79,6 +79,13 @@ void Application::update() {
         player->pos.x += cos(player->yaw) * speed;
     }
 
+    if (keys[SDL_SCANCODE_SPACE]) {
+        player->pos.y += speed;
+    }
+    if (keys[SDL_SCANCODE_LSHIFT]) {
+        player->pos.y -= speed;
+    }
+
 
     if (keys[SDL_SCANCODE_ESCAPE]) {
         WIN->close();
