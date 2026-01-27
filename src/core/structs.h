@@ -10,9 +10,13 @@ struct Vec2 {
 };
 
 struct Vec3 {
-    float x, y, z;
+    float x, y, z, w=1;
 };
 
+
+struct Mat4 {
+    float m[4][4];
+};
 
 struct Face {
     int v1, v2, v3;

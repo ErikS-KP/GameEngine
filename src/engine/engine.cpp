@@ -25,6 +25,8 @@ void Engine::render() {
     pointsToDraw.reserve(10000);
     SDL_Point _point;
 
+    Mat4 CamRotMat;
+    CamRotMat = rotateY(v, player->yaw);
 
     for (const Mesh &mesh : meshes) {
         for (const MeshPart &part : mesh.parts) {
